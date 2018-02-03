@@ -1,0 +1,28 @@
+package vinayak;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class vinayak {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","C:\\driver1\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.statefarm.com");
+		driver.findElement(By.id("qam-next-lob")).click();
+		driver.findElement(By.id("quote-main-zip-code-input")).sendKeys(new String[]{"70531"});
+		driver.findElement(By.id("quote-main-zip-code-button")).click();
+		
+		driver.findElement(By.id("effectiveDate")).sendKeys(new String[]{"01/01/2019"});
+		driver.findElement(By.id("firstName")).sendKeys(new String[]{"IFRQ"});
+		driver.findElement(By.id("lastName")).sendKeys(new String[]{"MONITORING SCRIPT"});
+
+	
+		
+		
+
+	}
+
+}
